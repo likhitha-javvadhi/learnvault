@@ -8,3 +8,15 @@ wheels/
 
 # Virtual environments
 .venv
+
+venv/
+.venv/
+
+chroma_db/
+docs/
+
+__pycache__/
+*.pyc
+
+.env
+
