@@ -1,37 +1,100 @@
-# 📚 LearnVault
+# LearnVault 📚🤖  
+**RAG-based Personal AI Tutor**
 
-- Personal RAG-based AI tutor built with Python.
-- It allows you to ask questions from your own notes using a local LLM.
+LearnVault is a Retrieval-Augmented Generation (RAG) application that allows users to upload documents and ask questions based on their content.  
+It uses **Streamlit** for UI, **Ollama** for local LLM inference, and **ChromaDB** for vector storage.
 
+---
 
-## Features
+## 🚀 Features
+- Upload TXT / PDF / DOCX documents
+- Build a document-based knowledge base
+- Ask contextual questions from uploaded documents
+- Local LLM inference using Ollama (no cloud dependency)
+- Clean and simple Streamlit UI
 
-- Ask questions from your own notes
-- Retrieval Augmented Generation (RAG)
-- Local LLM using Ollama (llama3)
-- Vector database with Chroma
-- Streamlit web UI
+---
 
-## Tech Stack
-
+## 🛠 Tech Stack
 - Python
 - Streamlit
 - LangChain
 - Ollama
 - ChromaDB
 
-## How to run
+---
 
-1. Install dependencies
+## 📂 Project Structure
+learnvault/
+│── app.py # Streamlit UI
+│── chat.py # Chat & response logic
+│── ingest.py # Document ingestion & vector storage
+│── requirements.txt
+│── README.md
+│── .gitignore
 
+
+---
+
+## ▶️ How to Run Locally
+
+1️⃣ Install Ollama
+Download and install Ollama from:  
+https://ollama.com
+
+Pull a model (example):
+```bash
+ollama pull llama3
+
+Run Ollama (if not already running):
+
+ollama serve
+
+2️⃣ Clone Repository
+git clone https://github.com/likhitha-javvadhi/learnvault.git
+cd learnvault
+
+3️⃣ Create Virtual Environment
+python -m venv .venv
+.venv\Scripts\activate
+
+4️⃣ Install Dependencies
 pip install -r requirements.txt
 
-2. Add your notes to docs/notes.txt
-
-3. Ingest documents
-
-python ingest.py
-
-4. Run app
-
+5️⃣ Run Streamlit App
 streamlit run app.py
+
+
+Open browser:
+
+http://localhost:8501
+```
+
+---
+
+## 🖼 Screenshots
+
+Screenshots are available inside the `/screenshots` folder:
+
+- Project_structure.png  
+- streamlit_run.png  
+- Documents_loading.png  
+- App_ui.png  
+- App_result.png  
+
+---
+
+## ✨ Future Improvements
+
+- User authentication  
+- Better UI styling  
+- Cloud deployment  
+- Chat history persistence  
+
+---
+
+## 👩‍💻 Author
+
+**Likhitha Javvadhi**
+
+GitHub: https://github.com/likhitha-javvadhi
